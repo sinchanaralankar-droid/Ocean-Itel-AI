@@ -1,0 +1,429 @@
+{
+  "aligned_data": [
+    {
+      "DateStr": "2009-01",
+      "Year": 2009,
+      "Month": 1,
+      "SST": 27.648386001586914,
+      "Salinity": 34.9632682800293,
+      "Currents": 0.1691393995285034,
+      "Colour": 0.055618636310100555,
+      "FishCatch": 33301.5,
+      "LarvaeCount": 1899.5,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-02",
+      "Year": 2009,
+      "Month": 2,
+      "SST": 27.969985961914062,
+      "Salinity": 34.95524597167969,
+      "Currents": 0.1349232530593872,
+      "Colour": 0.05291437730193138,
+      "FishCatch": 91355.4,
+      "LarvaeCount": 1266.3,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-03",
+      "Year": 2009,
+      "Month": 3,
+      "SST": 29.08828353881836,
+      "Salinity": 34.93983459472656,
+      "Currents": 0.10438789844512938,
+      "Colour": 0.05415214225649834,
+      "FishCatch": 91355.4,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-04",
+      "Year": 2009,
+      "Month": 4,
+      "SST": 29.762989044189453,
+      "Salinity": 34.927520751953125,
+      "Currents": 0.14717110633850097,
+      "Colour": 0.05691533535718918,
+      "FishCatch": 69154.4,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-05",
+      "Year": 2009,
+      "Month": 5,
+      "SST": 30.014347076416016,
+      "Salinity": 34.95945739746094,
+      "Currents": 0.18210402488708496,
+      "Colour": 0.06474988907575607,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 14.0
+    },
+    {
+      "DateStr": "2009-06",
+      "Year": 2009,
+      "Month": 6,
+      "SST": 29.341514587402344,
+      "Salinity": 34.98740005493164,
+      "Currents": 0.24933008193969725,
+      "Colour": 0.066804900765419,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 14.0
+    },
+    {
+      "DateStr": "2009-07",
+      "Year": 2009,
+      "Month": 7,
+      "SST": 28.393157958984375,
+      "Salinity": 35.01302719116211,
+      "Currents": 0.27192529678344723,
+      "Colour": 0.06669427454471588,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 17.3
+    },
+    {
+      "DateStr": "2009-08",
+      "Year": 2009,
+      "Month": 8,
+      "SST": 28.533466339111328,
+      "Salinity": 35.022132873535156,
+      "Currents": 0.23114766597747802,
+      "Colour": 0.07431114464998245,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 3.3
+    },
+    {
+      "DateStr": "2009-09",
+      "Year": 2009,
+      "Month": 9,
+      "SST": 28.63275909423828,
+      "Salinity": 35.04307174682617,
+      "Currents": 0.2052536916732788,
+      "Colour": 0.0671520084142685,
+      "FishCatch": 1981.3,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 3.3
+    },
+    {
+      "DateStr": "2009-10",
+      "Year": 2009,
+      "Month": 10,
+      "SST": 29.220579147338867,
+      "Salinity": 35.04420852661133,
+      "Currents": 0.14481323719024658,
+      "Colour": 0.059652309864759445,
+      "FishCatch": 46959.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-11",
+      "Year": 2009,
+      "Month": 11,
+      "SST": 29.04220962524414,
+      "Salinity": 35.03976058959961,
+      "Currents": 0.14947939395904541,
+      "Colour": 0.058544307947158813,
+      "FishCatch": 57878.6,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2009-12",
+      "Year": 2009,
+      "Month": 12,
+      "SST": 28.332374572753906,
+      "Salinity": 35.05016326904297,
+      "Currents": 0.17088106155395508,
+      "Colour": 0.059456467628479004,
+      "FishCatch": 55897.3,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2010-01",
+      "Year": 2010,
+      "Month": 1,
+      "SST": 27.782644271850586,
+      "Salinity": 35.01026916503906,
+      "Currents": 0.17208917140960692,
+      "Colour": 0.055618636310100555,
+      "FishCatch": 30574.6,
+      "LarvaeCount": 1966.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2010-02",
+      "Year": 2010,
+      "Month": 2,
+      "SST": 27.86577606201172,
+      "Salinity": 34.984832763671875,
+      "Currents": 0.1428576135635376,
+      "Colour": 0.05291437730193138,
+      "FishCatch": 95600.3,
+      "LarvaeCount": 1966.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2010-03",
+      "Year": 2010,
+      "Month": 3,
+      "SST": 29.140201568603516,
+      "Salinity": 34.98158264160156,
+      "Currents": 0.11229198217391967,
+      "Colour": 0.05415214225649834,
+      "FishCatch": 95600.3,
+      "LarvaeCount": 1966.0,
+      "CetaceanSightings": 0.0
+    },
+    {
+      "DateStr": "2010-04",
+      "Year": 2010,
+      "Month": 4,
+      "SST": 30.443321228027344,
+      "Salinity": 34.97945022583008,
+      "Currents": 0.11693166017532348,
+      "Colour": 0.05691533535718918,
+      "FishCatch": 75945.3,
+      "LarvaeCount": 0.3,
+      "CetaceanSightings": 0.3
+    },
+    {
+      "DateStr": "2010-05",
+      "Year": 2010,
+      "Month": 5,
+      "SST": 30.856626510620117,
+      "Salinity": 34.97944259643555,
+      "Currents": 0.16861711978912353,
+      "Colour": 0.06474988907575607,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.3,
+      "CetaceanSightings": 0.3
+    },
+    {
+      "DateStr": "2010-06",
+      "Year": 2010,
+      "Month": 6,
+      "SST": 29.81515121459961,
+      "Salinity": 34.989280700683594,
+      "Currents": 0.2355990743637085,
+      "Colour": 0.066804900765419,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.3,
+      "CetaceanSightings": 0.3
+    },
+    {
+      "DateStr": "2010-07",
+      "Year": 2010,
+      "Month": 7,
+      "SST": 28.971498489379883,
+      "Salinity": 35.023555755615234,
+      "Currents": 0.24811755180358885,
+      "Colour": 0.06669427454471588,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 1.7
+    },
+    {
+      "DateStr": "2010-08",
+      "Year": 2010,
+      "Month": 8,
+      "SST": 28.55743408203125,
+      "Salinity": 35.06015396118164,
+      "Currents": 0.22978125572204589,
+      "Colour": 0.07431114464998245,
+      "FishCatch": 0.0,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 1.7
+    },
+    {
+      "DateStr": "2010-09",
+      "Year": 2010,
+      "Month": 9,
+      "SST": 28.78371238708496,
+      "Salinity": 35.00747299194336,
+      "Currents": 0.18352336406707764,
+      "Colour": 0.0671520084142685,
+      "FishCatch": 433.7,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 2.0
+    },
+    {
+      "DateStr": "2010-10",
+      "Year": 2010,
+      "Month": 10,
+      "SST": 28.977872848510742,
+      "Salinity": 34.99725341796875,
+      "Currents": 0.17831803321838377,
+      "Colour": 0.059652309864759445,
+      "FishCatch": 52525.1,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.3
+    },
+    {
+      "DateStr": "2010-11",
+      "Year": 2010,
+      "Month": 11,
+      "SST": 28.80974578857422,
+      "Salinity": 34.99565887451172,
+      "Currents": 0.1553090000152588,
+      "Colour": 0.058544307947158813,
+      "FishCatch": 69581.8,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.7
+    },
+    {
+      "DateStr": "2010-12",
+      "Year": 2010,
+      "Month": 12,
+      "SST": 28.07708740234375,
+      "Salinity": 34.97677230834961,
+      "Currents": 0.17650264263153076,
+      "Colour": 0.059456467628479004,
+      "FishCatch": 103722.2,
+      "LarvaeCount": 0.0,
+      "CetaceanSightings": 0.5
+    }
+  ],
+  "correlation_matrix": {
+    "SST": {
+      "SST": 1.0,
+      "Salinity": -0.2268,
+      "Currents": -0.0927,
+      "Colour": 0.1845,
+      "FishCatch": -0.2115,
+      "LarvaeCount": -0.5148,
+      "CetaceanSightings": 0.1044
+    },
+    "Salinity": {
+      "SST": -0.2268,
+      "Salinity": 1.0,
+      "Currents": 0.4259,
+      "Colour": 0.5118,
+      "FishCatch": -0.4098,
+      "LarvaeCount": -0.2353,
+      "CetaceanSightings": -0.0013
+    },
+    "Currents": {
+      "SST": -0.0927,
+      "Salinity": 0.4259,
+      "Currents": 1.0,
+      "Colour": 0.8185,
+      "FishCatch": -0.8009,
+      "LarvaeCount": -0.3526,
+      "CetaceanSightings": 0.5904
+    },
+    "Colour": {
+      "SST": 0.1845,
+      "Salinity": 0.5118,
+      "Currents": 0.8185,
+      "Colour": 1.0,
+      "FishCatch": -0.8433,
+      "LarvaeCount": -0.5773,
+      "CetaceanSightings": 0.4325
+    },
+    "FishCatch": {
+      "SST": -0.2115,
+      "Salinity": -0.4098,
+      "Currents": -0.8009,
+      "Colour": -0.8433,
+      "FishCatch": 1.0,
+      "LarvaeCount": 0.3609,
+      "CetaceanSightings": -0.5042
+    },
+    "LarvaeCount": {
+      "SST": -0.5148,
+      "Salinity": -0.2353,
+      "Currents": -0.3526,
+      "Colour": -0.5773,
+      "FishCatch": 0.3609,
+      "LarvaeCount": 1.0,
+      "CetaceanSightings": -0.2569
+    },
+    "CetaceanSightings": {
+      "SST": 0.1044,
+      "Salinity": -0.0013,
+      "Currents": 0.5904,
+      "Colour": 0.4325,
+      "FishCatch": -0.5042,
+      "LarvaeCount": -0.2569,
+      "CetaceanSightings": 1.0
+    }
+  },
+  "alerts": [
+    {
+      "type": "contradiction",
+      "title": "High Fisheries Catch in Warm, Low-Saline Waters (2009-03)",
+      "description": "SST is high (29.09\u00b0C) and Salinity is low (34.9398 PSU), which typically represents poor habitat conditions. However, FishCatch is high (91355 individuals).",
+      "factors": [
+        "Method Variation: Trawl surveys might be targeting deeper, cooler waters that are not reflected in Surface SST.",
+        "Time Mismatch: A lag of 1-2 months often exists between warming temperatures and shifts in fish migration paths.",
+        "Location Difference: Localized upwelling zones can support high fish densities despite regional warm-surface satellite readings."
+      ],
+      "date": "2009-03"
+    },
+    {
+      "type": "contradiction",
+      "title": "High Fisheries Catch in Warm, Low-Saline Waters (2009-04)",
+      "description": "SST is high (29.76\u00b0C) and Salinity is low (34.9275 PSU), which typically represents poor habitat conditions. However, FishCatch is high (69154 individuals).",
+      "factors": [
+        "Method Variation: Trawl surveys might be targeting deeper, cooler waters that are not reflected in Surface SST.",
+        "Time Mismatch: A lag of 1-2 months often exists between warming temperatures and shifts in fish migration paths.",
+        "Location Difference: Localized upwelling zones can support high fish densities despite regional warm-surface satellite readings."
+      ],
+      "date": "2009-04"
+    },
+    {
+      "type": "contradiction",
+      "title": "High Fisheries Catch in Warm, Low-Saline Waters (2010-03)",
+      "description": "SST is high (29.14\u00b0C) and Salinity is low (34.9816 PSU), which typically represents poor habitat conditions. However, FishCatch is high (95600 individuals).",
+      "factors": [
+        "Method Variation: Trawl surveys might be targeting deeper, cooler waters that are not reflected in Surface SST.",
+        "Time Mismatch: A lag of 1-2 months often exists between warming temperatures and shifts in fish migration paths.",
+        "Location Difference: Localized upwelling zones can support high fish densities despite regional warm-surface satellite readings."
+      ],
+      "date": "2010-03"
+    },
+    {
+      "type": "contradiction",
+      "title": "High Fisheries Catch in Warm, Low-Saline Waters (2010-04)",
+      "description": "SST is high (30.44\u00b0C) and Salinity is low (34.9795 PSU), which typically represents poor habitat conditions. However, FishCatch is high (75945 individuals).",
+      "factors": [
+        "Method Variation: Trawl surveys might be targeting deeper, cooler waters that are not reflected in Surface SST.",
+        "Time Mismatch: A lag of 1-2 months often exists between warming temperatures and shifts in fish migration paths.",
+        "Location Difference: Localized upwelling zones can support high fish densities despite regional warm-surface satellite readings."
+      ],
+      "date": "2010-04"
+    },
+    {
+      "type": "anomaly",
+      "title": "Severe Cetacean Decline Amid Stable Oceanography (2010)",
+      "description": "Cetacean sightings fell by 85.0% in 2010 compared to 2009. Meanwhile, regional SST changed by only 0.175\u00b0C and Salinity by 0.0034 PSU.",
+      "factors": [
+        "Biological Surveys: The drop may reflect a shift in survey effort or observer coverage rather than an actual species decline.",
+        "Local Pressures: Increased shipping vessel traffic or coastal pollution in the Arabian Sea might be displacing cetaceans.",
+        "Food Web Shift: Target prey species (e.g. herring or sprats) may have migrated to deeper channels, forcing cetaceans to feed elsewhere."
+      ],
+      "date": "2010"
+    }
+  ],
+  "metadata": {
+    "region": "Arabian Sea (FAO Area 51)",
+    "coordinates": {
+      "lat_range": [
+        5.0,
+        25.0
+      ],
+      "lon_range": [
+        65.0,
+        95.0
+      ]
+    },
+    "time_period": "2009-2010",
+    "generated_at": "2026-08-14"
+  }
+}

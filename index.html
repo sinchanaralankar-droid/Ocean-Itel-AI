@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Intelligence Platform - FAO Area 51</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-anchor logo-icon"></i>
+                <div class="brand-text">
+                    <h1>Ocean Intel</h1>
+                    <span>AI Platform</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" id="nav-dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="#" class="nav-item" id="nav-regions"><i class="fa-solid fa-map-location-dot"></i> Region Selector</a>
+                <a href="#" class="nav-item" id="nav-anomalies"><i class="fa-solid fa-triangle-exclamation"></i> Anomalies <span class="badge" id="alert-count">0</span></a>
+                <a href="#" class="nav-item" id="nav-insights"><i class="fa-solid fa-brain"></i> Insights</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="region-info">
+                    <span class="label">Current Focus:</span>
+                    <span class="value">Arabian Sea (FAO 51)</span>
+                </div>
+                <div class="system-status">
+                    <span class="dot pulse-green"></span>
+                    <span>System Connected</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 id="page-title">Arabian Sea Intelligence Dashboard</h2>
+                    <p id="page-subtitle">Cross-pillar ecological alignment & correlation analysis (2009–2010)</p>
+                </div>
+                
+                <div class="header-right">
+                    <div class="time-control">
+                        <button class="time-btn active">2009–2010</button>
+                        <button class="time-btn" disabled>Real-time (Live)</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PAGE 1: DASHBOARD OVERVIEW -->
+            <div id="view-dashboard" class="page-view active-view">
+                <!-- KPI Cards Grid -->
+                <section class="kpi-grid">
+                    <div class="kpi-card text-glow-cyan">
+                        <div class="kpi-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Avg Sea Temp (SST)</span>
+                            <h3 class="kpi-value" id="kpi-sst">-- °C</h3>
+                            <span class="kpi-subtext" id="kpi-sst-sub">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card text-glow-blue">
+                        <div class="kpi-icon"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Avg Salinity</span>
+                            <h3 class="kpi-value" id="kpi-sal">-- PSU</h3>
+                            <span class="kpi-subtext" id="kpi-sal-sub">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card text-glow-teal">
+                        <div class="kpi-icon"><i class="fa-solid fa-fish"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Total Fish Catch</span>
+                            <h3 class="kpi-value" id="kpi-catch">--</h3>
+                            <span class="kpi-subtext" id="kpi-catch-sub">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card text-glow-indigo">
+                        <div class="kpi-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Cetacean Sightings</span>
+                            <h3 class="kpi-value" id="kpi-cetaceans">--</h3>
+                            <span class="kpi-subtext" id="kpi-cetaceans-sub">Loading...</span>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="dashboard-row">
+                    <!-- Main ocean/ecological time-series -->
+                    <div class="card chart-card flex-2">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-chart-area"></i> Ocean & Ecological Time-Series</h3>
+                            <div class="chart-toggles">
+                                <button class="chart-toggle active" data-type="physical">Physical Parameters</button>
+                                <button class="chart-toggle" data-type="biological">Biological Indicators</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="timeseries-chart"></div>
+                        </div>
+                    </div>
+
+                    <!-- Summary Info Card -->
+                    <div class="card summary-info-card flex-1">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-circle-info"></i> Summary Information</h3>
+                            <span class="subtitle">FAO Area 51 (Arabian Sea)</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="summary-details" style="font-size: 13px; color: var(--text-secondary); line-height: 1.6; display: flex; flex-direction: column; gap: 12px;">
+                                <p>The Arabian Sea (FAO Area 51) is a highly dynamic marine region governed by seasonal monsoon winds. This platform integrates physical variables (surface temperatures, salinity, currents, chlorophyll color) and biological indicators (fisheries catch index, larvae counts, cetacean sightings) to analyze cross-pillar coupling.</p>
+                                <p><strong>Key Finding:</strong> Strong coupling exists between primary productivity indicators (chlorophyll-a color) and subsequent fisheries landings, but seasonal upwellings introduce deep thermal buffering and migration lags.</p>
+                                <p>Use the sidebar navigation to toggle between the overview dashboard, regional parameters, anomaly logs, and AI-generated ecological insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: REGION SELECTOR -->
+            <div id="view-regions" class="page-view">
+                <div class="dashboard-row mid-row" style="height: auto; min-height: 500px;">
+                    <!-- Map Card -->
+                    <div class="card map-card" style="flex: 1.5; min-height: 480px; display: flex; flex-direction: column;">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-map"></i> Region Selector Map</h3>
+                            <span class="subtitle">Click a colored region on the map or hotspots to analyze sub-region parameters</span>
+                        </div>
+                        <div class="card-body" style="flex-grow: 1; min-height: 380px; position: relative;">
+                            <div id="map" style="width: 100%; height: 100%; border-radius: 12px;"></div>
+                            <button class="map-reset-btn" id="map-reset-btn"><i class="fa-solid fa-expand"></i> Reset View</button>
+                        </div>
+                    </div>
+
+                    <!-- Region Info Stats -->
+                    <div class="card region-stats-card flex-1" style="min-height: 480px; display: flex; flex-direction: column;">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-circle-nodes"></i> Regional Parameters</h3>
+                            <span class="subtitle">Focus analysis on specific sub-basin coordinates</span>
+                        </div>
+                        <div class="card-body" style="display: flex; flex-direction: column; gap: 15px; flex-grow: 1;">
+                            <div class="region-selector-container">
+                                <label for="subregion-select" style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 6px; font-weight: 600; letter-spacing: 0.5px;">ACTIVE TARGET AREA:</label>
+                                <select id="subregion-select" class="time-btn" style="width: 100%; font-size: 13px; font-weight:600; padding: 10px 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; color:#fff; font-family: inherit;">
+                                    <option value="global">Global FAO Area 51 (Arabian Sea)</option>
+                                    <option value="oman">Oman Upwelling Zone (Western)</option>
+                                    <option value="central">Central Deep Basin</option>
+                                    <option value="eastern">Eastern Shelf (India Coast)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="region-coord-details" style="padding: 10px 14px; background: rgba(0, 240, 255, 0.04); border: 1px dashed rgba(0,240,255,0.2); border-radius: 10px; font-size: 12px; font-family: var(--font-main);">
+                                <strong>Coordinates:</strong> <span id="region-coords" style="color: var(--color-cyan);">5.0°N - 25.0°N, 65.0°E - 95.0°E</span>
+                            </div>
+
+                            <div class="sub-stats-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
+                                <div class="sub-stat-item" style="padding: 10px 12px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                    <span style="font-size:10px; color:var(--text-muted); text-transform:uppercase; display:block;">Avg SST</span>
+                                    <strong id="reg-sst" style="font-size:15px; color:var(--color-cyan);">-- °C</strong>
+                                </div>
+                                <div class="sub-stat-item" style="padding: 10px 12px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                    <span style="font-size:10px; color:var(--text-muted); text-transform:uppercase; display:block;">Avg Salinity</span>
+                                    <strong id="reg-sal" style="font-size:15px; color:var(--color-blue);">-- PSU</strong>
+                                </div>
+                                <div class="sub-stat-item" style="padding: 10px 12px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                    <span style="font-size:10px; color:var(--text-muted); text-transform:uppercase; display:block;">Current Speed</span>
+                                    <strong id="reg-curr" style="font-size:15px; color:var(--color-teal);">-- m/s</strong>
+                                </div>
+                                <div class="sub-stat-item" style="padding: 10px 12px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.04);">
+                                    <span style="font-size:10px; color:var(--text-muted); text-transform:uppercase; display:block;">Ocean Colour</span>
+                                    <strong id="reg-col" style="font-size:15px; color:var(--color-indigo);">--</strong>
+                                </div>
+                            </div>
+
+                            <div class="region-bio-summary" style="margin-top: 15px; flex-grow:1; display:flex; flex-direction:column; justify-content:center;">
+                                <h4 style="font-size: 11px; text-transform: uppercase; color:var(--text-muted); margin-bottom: 6px; letter-spacing: 0.5px;">Fisheries & Biodiversity Summary:</h4>
+                                <p id="region-bio-desc" style="font-size: 12px; color: var(--text-secondary); line-height: 1.5; background: rgba(255,255,255,0.01); padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.02);">Global FAO Area 51 represents the aggregated baseline catch and cetacean metrics. Select a target area on the map or dropdown to see specialized upwelling yields and cetacean sightings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3: ANOMALIES -->
+            <div id="view-anomalies" class="page-view">
+                <div class="dashboard-row">
+                    <!-- Alerts / Anomalies list panel -->
+                    <div class="card alerts-card flex-1" style="min-height: 480px; display: flex; flex-direction: column;">
+                        <div class="card-header" style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3><i class="fa-solid fa-triangle-exclamation"></i> Flagged Anomalies & Contradictions</h3>
+                            <span class="badge badge-warning" id="detector-badge">0 Alerts</span>
+                        </div>
+                        <div class="card-body" style="flex-grow: 1; overflow-y: auto; max-height: 420px; padding-right: 5px;">
+                            <div class="alerts-list" id="alerts-list">
+                                <div class="alert-placeholder">Loading alerts...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Correlation Heatmap / Comparison panel -->
+                    <div class="card chart-card flex-1" style="min-height: 480px;">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-border-all"></i> Inter-Pillar Correlation Matrix</h3>
+                            <span class="subtitle">Reference patterns explaining flagged anomalies</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="heatmap-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 4: INSIGHTS -->
+            <div id="view-insights" class="page-view">
+                <div class="dashboard-row">
+                    <!-- AI Insights Panel -->
+                    <div class="card insights-card flex-1" style="min-height: 480px;">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-brain"></i> AI Ecological Insights</h3>
+                            <span class="badge badge-ai"><i class="fa-solid fa-sparkles"></i> AI Active</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="insights-container" id="insights-container">
+                                <div class="insight-section">
+                                    <h4><i class="fa-solid fa-compass-drafting text-cyan"></i> Environmental Baseline</h4>
+                                    <p id="insight-env">Loading baseline data...</p>
+                                </div>
+                                <div class="insight-section">
+                                    <h4><i class="fa-solid fa-shield-heart text-teal"></i> Biodiversity Shifts</h4>
+                                    <p id="insight-bio">Analyzing species sightings...</p>
+                                </div>
+                                <div class="insight-section">
+                                    <h4><i class="fa-solid fa-wave-square text-warning"></i> Anomaly Evaluation</h4>
+                                    <p id="insight-anomaly">Evaluating contradictions...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supporting Chart (Biodiversity bubble chart) -->
+                    <div class="card chart-card flex-1" style="min-height: 480px;">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-circle-nodes"></i> Biodiversity Trophic Richness</h3>
+                            <span class="subtitle">Trophic correlations (Catch vs Sightings vs Larvae Count)</span>
+                        </div>
+                        <div class="card-body">
+                            <div id="bubble-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Leaflet JS Map SDK -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- ApexCharts JS Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Custom Application Javascript -->
+    <script src="app.js"></script>
+</body>
+</html>
